@@ -1,1 +1,11 @@
 ﻿
+** https://modern-css.com/ ohjeita moderniin css:ään
+** galleriaa varten
+.wrapper {
+  display: contents;
+}
+
+**pretty for long articles
+.pretty-test {
+  text-wrap-style: pretty;
+}
