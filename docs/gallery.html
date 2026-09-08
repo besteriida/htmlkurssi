@@ -1,1 +1,50 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semanttinen HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Semanttinen HTML</h1>
+        <nav>
+            <a href="#juttu">Etusivu</a>
+            <a href="#juttu2">Juttu 2</a>
+            <a href="#juttu3">Juttu 3</a>
+            <a href="#juttu4">Juttu 4</a>
+        </nav>
+    </header>
+    <!-- Sisältö tän alle -->
+    <main>
+        <article>
+            <h2 id="juttu">Juttu 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <p>Julkaistu: <time datetime="2026-09-08">8. syyskuuta 2026</time></p>
+            <section>
+                <h3 id="juttu2">Juttu 2</h3>
+                <p><strong>Korostettu teksti</strong></p>
+                <p><em>Kursivoitu teksti</em></p>
+                <p><mark>Korostettu taustavärillä</mark></p>
+            </section>
+            <section>
+                <h3 id="juttu3">Juttu 3</h3>
+                <p>Paina linkistä jos etsit jotain: <a href="https://www.google.com">https://www.google.com</a></p>
+                <blockquote>
+                    <p><em>Aku Ankka</em> neuvoo katsomaan googlesta näin</p>
+                </blockquote>
+                <p>Koodia sivuille?</p>
+                <!-- Koodia voi laittaa html:ssä näin -->
+                <code>&lt;html&gt;</code>-elementti auttaa.
+            </section>
+        </article>
+        <aside>
+            <h2 id="juttu4">Juttu 4</h2>
+            <p>Lisätietoja löytyy linkistä <a href="https://www.google.com">https://www.google.com</a></p>
+        </aside>
+    </main>
+</body>
+
+</html>
