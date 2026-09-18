@@ -1,7 +1,4 @@
-﻿
-** https://modern-css.com/ ohjeita moderniin css:ään
-** galleriaa varten
-.wrapper {
+﻿.wrapper {
   display: contents;
 }
 
@@ -31,7 +28,7 @@ p {
 .esittely {
   font-size: 1.2rem;
   font-style: italic;
-  color: lavender;
+  color: rebeccapurple;
 }
 
 .yhteystiedot h2 {
@@ -47,6 +44,6 @@ a[href^="https"] {
 }
 
 #tarjous {
-  backgroundcolor: cornflowerblue;
+  background-color: cornflowerblue;
   font-weight: bold;
 }
