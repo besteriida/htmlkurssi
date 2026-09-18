@@ -1,11 +1,120 @@
-﻿
-** https://modern-css.com/ ohjeita moderniin css:ään
-** galleriaa varten
-.wrapper {
-  display: contents;
+﻿body {
+    margin: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(218, 207, 193);
+    color: #222;
+    }
+
+section {
+    margin-bottom: 40px;
 }
 
-**pretty for long articles
-.pretty-test {
-  text-wrap-style: pretty;
+/*
+1. LAATIKKOMALLIT 
+*/
+.tausta {
+    padding: 1px;
+    background-color: aqua;
+}
+
+.retkikortti {
+    width: 280px;
+    background-color: beige;
+    padding: 20px;
+    margin: 24px;
+    border: 4px solid red;
+    border-radius: 20px;
+
+}
+/* border-box sisällyttää paddingin ja borderin leveyteen */
+.rajattu {
+    box-sizing: border-box;
+}
+/* normaalisti kannattaa laittaa 
+* {
+     box-sizing: border-box;
+}
+     */
+
+/*
+2 PADDING JA MARGIN 
+*/
+
+.ilmoitus {
+    border: 2px solid green;
+    background-color: yellow;
+    margin: 0px 0px 60px; /* ylös, vasen ja oikea, alas */
+}
+
+.padding-yksi {
+    padding: 16px;
+}
+
+.padding-kaksi {
+    padding: 12px 32px; /*ylös ja alas, vasen ja oikea */
+}
+
+.padding-kolme {
+    padding: 8px 24px 36px; /*ylös, vasen ja oikea, alas */
+    }
+
+.padding-nelja {
+    padding: 8px 16px 24px 32px;
+}
+
+/*
+REUNAVIIVAT
+*/
+.reuna {
+    padding: 12px;
+    border-width:4px;
+    border-color: red;
+}
+
+.yhtenainen {
+    border-style: solid;
+}
+
+.katkoviiva{
+    border-style: dashed;
+}
+
+.pisteviiva{
+    border-style: dotted;
+}
+
+.puuttuva-reuna{
+    border-style: none;
+
+}
+
+.huomio{
+    padding: 12px 18px;
+    border-left: 6px solid brown;
+}
+
+.display-alue{
+    margin-bottom: 32px;
+    background-color: yellow;
+}
+.tunniste {
+    width: 140px;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid blue;
+    background-color: aliceblue;
+}
+
+.lohko {
+    display: block;
+    
+}
+
+.tekstin-seassa{
+    display: inline;
+}
+
+.rivilla-laatikkona {
+    display: inline-block;
 }

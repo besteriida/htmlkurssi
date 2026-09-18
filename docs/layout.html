@@ -1,34 +1,163 @@
 ﻿<!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampuskahvila</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout.css">
+  <title>Retkipäivä – layoutin perusteet</title>
+  <style>
+    h1 {
+        color: darkred;
+    }
+  </style>
+
 </head>
 
 <body>
+  <header>
+    <h1  style="color: darkgreen;">Retkipäivä</h1>
+    <p>Harjoitellaan CSS-layoutia retkisivun avulla.</p>
+  </header>
 
-    <header>
-        <h1>Kampuskahvila</h1>
-        <p>Pieni tauko opiskelupäivään</p>
-    </header>
+  <main>
+    <section>
+      <h2>1. Laatikkomalli ja box-sizing</h2>
 
-    <main>
+      <div class="tausta">
+        <article class="retkikortti">
+          <h3>Melontaretki</h3>
+          <p>Tämä kortti käyttää oletusarvoa content-box.</p>
+          <p>Leveysasetuksena on 280px.</p>
+        </article>
 
-        <section>
-            <h2>Tämän päivän tuotteet</h2>
+        <article class="retkikortti rajattu">
+          <h3>Metsäretki</h3>
+          <p>Tämä kortti käyttää arvoa border-box.</p>
+          <p>Leveysasetuksena on 280px.</p>
+        </article>
+      </div>
+    </section>
 
-            <p>Kahvi 2,50 €</p>
-            <p>Tee 2,00 €</p>
-            <p>Pulla 3,00 €</p>
-        </section>
+    <section>
+      <h2>2. Padding ja margin</h2>
 
-        <section>
-            <h2>Aukioloajat</h2>
-            <p>Ma–Pe 8.00–16.00</p>
-        </section>
+      <div class="tausta">
+        <p class="ilmoitus padding-yksi">
+          Yksi arvo: sama sisätila joka puolella.
+        </p>
 
-    </main>
+        <p class="ilmoitus padding-kaksi">
+          Kaksi arvoa: ylös ja alas sekä vasemmalle ja oikealle.
+        </p>
 
+        <p class="ilmoitus padding-kolme">
+          Kolme arvoa: ylös, sivuille ja alas.
+        </p>
+
+        <p class="ilmoitus padding-nelja">
+          Neljä arvoa: ylös, oikealle, alas ja vasemmalle.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Reunaviivat</h2>
+
+      <p class="reuna yhtenainen">
+        Retki toteutuu – yhtenäinen reunaviiva.
+      </p>
+
+      <p class="reuna katkoviiva">
+        Muista varusteet – katkoviiva.
+      </p>
+
+      <p class="reuna pisteviiva">
+        Kokoontuminen satamassa – pisteviiva.
+      </p>
+
+      <p class="reuna kaksoisviiva">
+        Varaus vahvistettu – kaksoisviiva.
+      </p>
+
+      <p class="huomio">
+        <strong>Huomio</strong>: kokoontumispaikka on vaihtunut.
+      </p>
+
+      <p class="erivarit">
+        Tämän laatikon jokaisella reunalla on eri väri.
+      </p>
+
+      <p class="puuttuva-reuna">
+        Miksi tämän tekstin ympärillä ei näy reunaviivaa?
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Display-arvojen vertailu</h2>
+
+      <h3>Block</h3>
+
+      <div class="display-alue">
+        <span class="tunniste lohko">Kartta</span>
+        <span class="tunniste lohko">Kompassi</span>
+      </div>
+
+      <h3>Inline</h3>
+
+      <div class="display-alue">
+        <span class="tunniste tekstin-seassa">Kartta </span>
+        <span class="tunniste tekstin-seassa">Kompassi</span>
+        ja muut retkivarusteet.
+      </div>
+
+      <h3>Inline-block</h3>
+
+      <div class="display-alue">
+        <span class="tunniste rivilla-laatikkona">Kartta</span>
+        <span class="tunniste rivilla-laatikkona">Kompassi</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Elementin piilottaminen</h2>
+
+      <p class="aikataulu">
+        Ilmoittautuminen alkaa klo 9.30.
+      </p>
+
+      <p class="aikataulu vanha-aika">
+        Vanha lähtöaika: klo 10.
+      </p>
+
+      <p class="aikataulu">
+        Uusi lähtöaika: klo 10.30.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Flexboxin idea</h2>
+
+      <div class="flex-alue">
+        <div class="varuste">Kartta</div>
+        <div class="varuste">Kompassi</div>
+        <div class="varuste">Juomapullo</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Gridin idea</h2>
+
+      <div class="grid-alue">
+        <div class="varuste">Kartta</div>
+        <div class="varuste">Kompassi</div>
+        <div class="varuste">Juomapullo</div>
+        <div class="varuste">Eväät</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Retkipäivä – HTML- ja CSS-harjoitus</p>
+  </footer>
 </body>
 </html>
