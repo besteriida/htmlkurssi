@@ -9,3 +9,44 @@
 .pretty-test {
   text-wrap-style: pretty;
 }
+
+body {
+  background-color: cornsilk;
+  width: 80vw;
+}
+
+h1 {
+  color: purple;
+}
+
+h1, h2, h3 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+p {
+  color:darkolivegreen;
+  font-size: 18px;
+}
+
+.esittely {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: lavender;
+}
+
+.yhteystiedot h2 {
+  color: lightblue;
+}
+
+a[href^="https"] {
+  color: lightcoral;
+}
+
+#tiedot {
+  color: lightgreen;
+}
+
+#tarjous {
+  backgroundcolor: cornflowerblue;
+  font-weight: bold;
+}
