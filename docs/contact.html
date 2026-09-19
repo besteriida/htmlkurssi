@@ -5,22 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yhteystiedot</title>
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="css/layout.css">
 </head>
 
 <body>
     <header>
         <h1>Yhteystiedot</h1>
     </header>
+
     <main>
-        <p>Laita viestiä!</p>
+        <section class="yhteystiedot">
+            <h2 id="tiedot">Yhteystiedot</h2>
+
+            <p>Talokatu 3</p>
+            <p>
+                <a href="mailto:iida@example.com">iida@example.com</a>
+            </p>
+            <p>
+                <a href="https://talokatu.com" target="_blank" rel="noopener noreferrer">
+                    talokatu.com
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Lähetä viesti</h2>
+            <form class="retkikortti rajattu">
+                <p>
+                    <label for="nimi">Nimi</label><br>
+                    <input id="nimi" name="nimi" type="text">
+                </p>
+                <p>
+                    <label for="sahkoposti">Sähköposti</label><br>
+                    <input id="sahkoposti" name="sahkoposti" type="email">
+                </p>
+                <p>
+                    <label for="viesti">Viesti</label><br>
+                    <textarea id="viesti" name="viesti" rows="5"></textarea>
+                </p>
+                <button type="submit">Lähetä</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Vastaanottoajat</h2>
+            <div class="grid-alue">
+                <div class="varuste">Ma–Pe 9.00–16.00</div>
+                <div class="varuste">La–Su suljettu</div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Iidan galleria. Kaikki oikeudet pidätetään.</p>
     </footer>
-
 </body>
 
 </html>
