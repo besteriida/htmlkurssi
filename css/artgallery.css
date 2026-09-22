@@ -1,0 +1,54 @@
+﻿/* Perusasetukset */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif, Helvetica;
+  background-color: antiqueWhite;
+  color: rgb(10, 10, 10);
+}
+
+/* MAIN */ 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  /* keskitetään keskelle */ 
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 10px; /*lävistys*/
+}
+
+.intro {
+  color: darkorange;
+  max-width: 700px;
+}
+
+.gallery-section {
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* rivitys päälle */
+  gap: 20px; /* rivityksen väli */
+}
+
+.gallery-item {
+  flex: 1 1 300px; /* kasvaa, kutistuu, taivuteltava leveys */
+  background-color: rgb(248, 206, 144);
+  border-radius: 8px;
+  overflow: hidden; /*ei näytetä jos menee reunan yli*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /*kuva täyttää koko alueen*/
+}
