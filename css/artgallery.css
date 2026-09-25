@@ -11,6 +11,35 @@ body {
   color: rgb(10, 10, 10);
 }
 
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: darkorange;
+}
+
+.logo {
+  color:aliceblue;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navi ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navi a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
 /* MAIN */ 
 .container {
   width: 90%;
@@ -51,4 +80,77 @@ h1 {
   width: 100%;
   height: 220px;
   object-fit: cover; /*kuva täyttää koko alueen*/
+}
+
+/* Kuvakaruselli */
+
+.carousel-section {
+  margin-bottom: 60px;
+}
+
+.carousel-section p {
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* ei rivitystä */
+  gap: 20px;
+  overflow-x: auto; /* vaakasuuntaista vieritystä saa tehdä */
+  scroll-snap-type:x proximity; /* vieritys pysähtyy kuvan kohdalle ja tää tarvii kaveriksi scroll snapin */
+  scroll-behavior: smooth; /* vieritys on sulavaa */
+  padding-bottom: 20px; /* tilaa vierityspalkille */
+  scrollbar-width: none; /* piilotetaan vierityspalkki selaimessa */
+}
+
+.carousel-item {
+  flex: 0 0 80%; /* ei kasva, ei kutistu, leveys 80% */
+  scroll-snap-align: center; /* vieritys pysähtyy kuvan keskelle */
+  background-color: rgb(248, 206, 144);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-item figcaption {
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Jokaisesta linkistä oma säiliönsä */
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* asetellaan numerot containerissa keskelle keskelle */ 
+
+.carousel-nav a {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  background-color: darkorange;
+}
+
+/* hover karusellin naviin */ 
+
+.carousel-nav a:hover {
+  background-color: coral;
 }
