@@ -12,12 +12,13 @@
 }
 
 body {
-  background-color: cornsilk;
+  background-color: #f4f1ea;
   width: 80vw;
+  color: #1f2933;
 }
 
 h1 {
-  color: purple;
+  color: #123b5d;
 }
 
 h1, h2, h3 {
@@ -25,29 +26,29 @@ h1, h2, h3 {
 }
 
 p {
-  color:darkolivegreen;
+  color: #263238;
   font-size: 18px;
 }
 
 .esittely {
   font-size: 1.2rem;
   font-style: italic;
-  color: rebeccapurple;
+  color: #5b3a70;
 }
 
 .yhteystiedot h2 {
-  color: lightblue;
+  color: #1f5a75;
 }
 
 a[href^="https"] {
-  color: lightcoral;
+  color: #0b5c8e;
 }
 
 #tiedot {
-  color: lightgreen;
+  color: #1f5a75;
 }
 
 #tarjous {
-  background-color: cornflowerblue;
+  background-color: #d9eaf0;
   font-weight: bold;
 }

@@ -7,8 +7,8 @@
 
 body {
   font-family: Arial, sans-serif, Helvetica;
-  background-color: antiqueWhite;
-  color: rgb(10, 10, 10);
+  background-color: #f7f1e3;
+  color: #1f2933;
 }
 
 /* HEADER */
@@ -17,11 +17,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: darkorange;
+  background-color: #0f4c5c;
 }
 
 .logo {
-  color:aliceblue;
+  color: #ffffff;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -34,7 +34,7 @@ body {
 }
 
 .navi a {
-  color: aliceblue;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
 }
@@ -53,7 +53,7 @@ h1 {
 }
 
 .intro {
-  color: darkorange;
+  color: #0f4c5c;
   max-width: 700px;
 }
 
@@ -70,7 +70,7 @@ h1 {
 
 .gallery-item {
   flex: 1 1 300px; /* kasvaa, kutistuu, taivuteltava leveys */
-  background-color: rgb(248, 206, 144);
+  background-color: #f2d6a2;
   border-radius: 8px;
   overflow: hidden; /*ei näytetä jos menee reunan yli*/
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
@@ -107,7 +107,7 @@ h1 {
 .carousel-item {
   flex: 0 0 80%; /* ei kasva, ei kutistu, leveys 80% */
   scroll-snap-align: center; /* vieritys pysähtyy kuvan keskelle */
-  background-color: rgb(248, 206, 144);
+  background-color: #f2d6a2;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
@@ -146,11 +146,11 @@ h1 {
   border-radius: 50%;
   color: white;
   text-decoration: none;
-  background-color: darkorange;
+  background-color: #0f4c5c;
 }
 
 /* hover karusellin naviin */ 
 
 .carousel-nav a:hover {
-  background-color: coral;
+  background-color: #1b7285;
 }
