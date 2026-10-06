@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blanchedalmond;
+    color: #222;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    /*nimetyt alueet*/
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "sidebar main"
+    "footer footer";
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* keskittää layoutin vaakasuunnassa  */
+    /*padding: 20px;*/
+ }
+
+ .header {
+    grid-area: header; 
+    background-color: rgb(12, 44, 65);
+    padding: 30px;
+    margin: 0;
+    color: whitesmoke;
+ }
+
+ .nav {
+    grid-area: nav;
+    background-color: rgb(23, 61, 85);
+ }
+
+ .main{
+    grid-area: main;
+ }
+ .main h2 {
+    margin-bottom: 20px;
+ }
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 20px;
+}
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 5px;
+    line-height: 1.25;
+}
+
+.card a{
+    color: darkblue;
+    font-weight: bold;
+
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: azure;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar a{
+    color: darkblue;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: rgb(10, 15, 2);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(20, 229, 174);
+    color: whitesmoke;
+    padding: 20px;
+}    
+.nav a:hover, nav a:focus {
+    background-color: rgb(1, 31, 89);
+}
+
+nav a.active {
+    color: white;
+    color: rgb(1, 31, 89);
+}
+
+.main {
+    grid-area: main; 
+}
+
+.main h2 {
+    margin-bottom: 20px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+.blogi-article {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+
+}
+
+.blogi-article ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.kuva-teksti {
+    margin-top: 30px;
+}    
+
+.kuva-teksti-rivi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+
+}
+
+.kuva-teksti img { 
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+.kuva-teksti {
+    padding: 30px
+}    

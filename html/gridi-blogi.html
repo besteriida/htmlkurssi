@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Web-blogi</title>
+
+  <link rel="stylesheet" href="css/gridi-blogi.css">
+</head>
+
+<body>
+<!--Tästä tulee koko sivun container: header, nav, main,aside, footer-->
+  <div class="container">
+<!--Header-->
+    <header class="header">
+      <h1>Web-blogi</h1>
+      <p>Ajankohtaista HTML:stä ja CSS:stä</p>
+    </header>
+<!--Erillinen navigaatioheadern alla-->
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Etusivu</a></li>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">Grid</a></li>
+      </ul>
+    </nav>
+<!--main, tähän ei kuulu header, aside tai footer-->
+    <main class="main">
+
+      <h2>Uusimmat artikkelit</h2>
+<!--Artikkelien container, automaattisesti rivittyvä-->
+      <div class="article-grid">
+<!--Yksittäisten korttien asetukset-->
+        <article class="card">
+          <h3>CSS Gridin perusteet</h3>
+
+          <p>
+            CSS Grid mahdollistaa kaksiulotteisten
+            layoutien rakentamisen riveillä ja sarakkeilla.
+          </p>
+
+          <a href="#">Lue artikkeli</a>
+        </article>
+
+        <article class="card">
+          <h3>Miksi semanttinen HTML kannattaa?</h3>
+
+          <p>
+            Semanttinen HTML tekee sivusta selkeämmän
+            sekä selaimelle että käyttäjälle.
+          </p>
+
+          <a href="#">Lue artikkeli</a>
+        </article>
+
+        <article class="card">
+          <h3>Flexbox vai Grid?</h3>
+
+          <p>
+            Flexbox sopii erityisesti yksiulotteisiin
+            rakenteisiin ja Grid kaksiulotteisiin.
+          </p>
+
+          <a href="#">Lue artikkeli</a>
+        </article>
+
+        <article class="card">
+          <h3>CSS:n hyödylliset yksiköt</h3>
+
+          <p>
+            px, %, rem, fr ja viewport-yksiköt
+            sopivat eri käyttötarkoituksiin.
+          </p>
+
+          <a href="#">Lue artikkeli</a>
+        </article>
+
+      </div>
+
+    </main>
+<!--Sivupalkki alkaa tästä-->
+    <aside class="sidebar">
+
+      <h2>Kategoriat</h2>
+
+      <ul>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">Grid</a></li>
+        <li><a href="#">Flexbox</a></li>
+        <li><a href="#">Saavutettavuus</a></li>
+      </ul>
+
+    </aside>
+<!--Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Web-blogi</p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
