@@ -11,43 +11,38 @@ body{
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 20% 1fr;
-    /*nimetyt alueet*/
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "sidebar main"
-    "footer footer";
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto; /* keskittää layoutin vaakasuunnassa  */
-    /*padding: 20px;*/
- }
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   max-width: 1200px;
+   margin: 0 auto; /* keskittää layoutin vaakasuunnassa  */
+   /*padding: 20px;*/
+}
 
- .header {
-    grid-area: header; 
-    background-color: rgb(12, 44, 65);
-    padding: 30px;
-    margin: 0;
+.header {
+   flex: 0 0 100%;
+   background-color: rgb(12, 44, 65);
+   padding: 30px;
+   margin: 0;
     color: whitesmoke;
  }
 
  .nav {
-    grid-area: nav;
+    flex: 0 0 100%;
     background-color: rgb(23, 61, 85);
  }
 
  .main{
-    grid-area: main;
+    flex: 1 1 0;
+    order: 2;
  }
  .main h2 {
     margin-bottom: 20px;
  }
 
 .article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -73,7 +68,8 @@ body{
 }
 
 .sidebar{
-    grid-area: sidebar;
+    flex: 0 1 20%;
+    order: 1;
     background-color: azure;
     padding: 20px;
 }
@@ -92,7 +88,7 @@ body{
 }
 
 .footer {
-    grid-area: footer;
+    flex: 0 0 100%;
     background-color: rgb(20, 229, 174);
     color: whitesmoke;
     padding: 20px;
@@ -107,7 +103,7 @@ nav a.active {
 }
 
 .main {
-    grid-area: main; 
+    min-width: 0;
 }
 
 .main h2 {
@@ -115,8 +111,8 @@ nav a.active {
 }
 
 .article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -138,8 +134,8 @@ nav a.active {
 }    
 
 .kuva-teksti-rivi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     align-items: center;
     margin-bottom: 30px;
@@ -149,6 +145,7 @@ nav a.active {
 }
 
 .kuva-teksti img { 
+    flex: 1 1 300px;
     width: 100%;
     height: 260px;
     object-fit: cover;
