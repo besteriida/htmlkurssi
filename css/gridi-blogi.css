@@ -181,8 +181,10 @@ nav a.active {
 .carousel-item {
     flex: 0 0 220px;
     scroll-snap-align: center;
+    background-color: transparent;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: none;
 }
 
 .carousel-item img {
@@ -199,6 +201,7 @@ nav a.active {
     padding: 12px;
     text-align: center;
     font-size: 18px;
+    background-color: transparent;
 }
 
 .carousel-nav {
