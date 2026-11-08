@@ -11,8 +11,13 @@ body{
 }
 
 .container {
-   display: flex;
-   flex-wrap: wrap;
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) 240px;
+   grid-template-areas:
+       "header header"
+       "nav nav"
+       "main sidebar"
+       "footer footer";
    gap: 20px;
    max-width: 1200px;
    margin: 0 auto; /* keskittää layoutin vaakasuunnassa  */
@@ -20,7 +25,7 @@ body{
 }
 
 .header {
-   flex: 0 0 100%;
+   grid-area: header;
    background-color: rgb(12, 44, 65);
    padding: 30px;
    margin: 0;
@@ -28,13 +33,12 @@ body{
  }
 
  .nav {
-    flex: 0 0 100%;
+    grid-area: nav;
     background-color: rgb(23, 61, 85);
  }
 
  .main{
-    flex: 1 1 0;
-    order: 2;
+    grid-area: main;
  }
  .main h2 {
     margin-bottom: 20px;
@@ -68,8 +72,7 @@ body{
 }
 
 .sidebar{
-    flex: 0 1 20%;
-    order: 1;
+    grid-area: sidebar;
     background-color: azure;
     padding: 20px;
 }
@@ -88,7 +91,7 @@ body{
 }
 
 .footer {
-    flex: 0 0 100%;
+    grid-area: footer;
     background-color: rgb(20, 229, 174);
     color: whitesmoke;
     padding: 20px;
@@ -153,4 +156,82 @@ nav a.active {
 }
 .kuva-teksti {
     padding: 30px
-}    
+}
+
+.carousel-section {
+    margin: 30px 0 60px;
+}
+
+.carousel-section p {
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+}
+
+.carousel-item {
+    flex: 0 0 220px;
+    scroll-snap-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.carousel-item figcaption {
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.carousel-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(23, 61, 85);
+}
+
+.carousel-nav a:hover {
+    background-color: rgb(1, 31, 89);
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "footer";
+    }
+}
