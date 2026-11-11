@@ -170,11 +170,13 @@ nav a.active {
     display: block;
 }
 
-.hero .kuva-teksti-rivi img {
+.hero .kuva-teksti-rivi img { /* hero-kuva että asiakkaat näkee heti kuvan kun ne tulee sivuille */
+    height: 440px; /* iso kuva niin on hienompi */
     object-fit: contain;
+    object-position: left center; /* kuva vasempaan reunaan */
 }
 
-.kuva-teksti {
+.kuva-teksti { /* hero kuvan tekstin tyylit */
     padding: 30px
 }
 

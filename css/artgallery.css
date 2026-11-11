@@ -85,22 +85,45 @@ h1 {
 }
 
 .gallery-item {
-  background-color: #f2d6a2;
+  background-color: transparent;
   border-radius: 8px;
   overflow: hidden; /*ei näytetä jos menee reunan yli*/
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 }
 
 .gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover; /*kuva täyttää koko alueen*/
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  margin: 0 auto;
   display: block;
+  transition: transform 0.2s ease;
 }
 
 .gallery-item figcaption {
   padding: 12px;
   text-align: center;
+}
+
+.gallery-item input {
+  display: none;
+}
+
+.gallery-item label {
+  display: block;
+  cursor: pointer;
+}
+
+.gallery-item:has(input:checked) {
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-item:has(input:checked) img {
+  transform: scale(1.5);
 }
 
 /* Kuvakaruselli */
