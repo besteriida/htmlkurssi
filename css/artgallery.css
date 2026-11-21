@@ -8,9 +8,9 @@
 
 /* Asettaa sivulle fontin, taustavärin, tekstivärin ja rivivälin. */
 body {
-  font-family: Arial, sans-serif, Helvetica;
-  background-color: #f7f1e3;
-  color: #1f2933;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #faf7f2;
+  color: #234649;
   line-height: 1.5;
 }
 
@@ -27,7 +27,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #0f4c5c;
+  background-color: #234649;
 }
 
 /* Muotoilee yläpalkin logo-linkin jonkun väriseksi otsikkotekstiksi. */
@@ -55,7 +55,7 @@ img {
 }
 /* Hover-effekti navilinkkien päälle. */
 .main-nav a:hover {
-  background-color: #1b7285;
+  background-color: #2f5d62;
 }
 
 .post-info {
@@ -79,7 +79,7 @@ h1 {
 
 /* Muotoilee esittelyosion tekstin ja sen leveyden. */
 .intro {
-  color: #0f4c5c;
+  color: #2f5d62;
   max-width: 700px;
   margin-bottom: 40px;
 }
@@ -110,12 +110,12 @@ h1 {
 /* Asettaa otsikon koko ruudukon levyiseksi. */
 .gallery h3 {
   grid-column: 1 / -1;
-  color: #0f4c5c;
+  color: #2f5d62;
   margin-top: 10px;
 }
 /* Muotoilee gallerian kuvan taustalla, kulmilla ja varjolla. */
 .gallery-item {
-  background-color: #f2d6a2;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 }
@@ -229,13 +229,13 @@ h1 {
   border-radius: 50%;
   color: white;
   text-decoration: none;
-  background-color: #0f4c5c;
+  background-color: #234649;
 }
 
 /* hover karusellin naviin */ 
 /* Muuttaa numeropainikkeen taustavärin osoitettaessa sitä hiirellä. */
 .carousel-nav a:hover {
-  background-color: #1b7285;
+  background-color: #2f5d62;
 }
 
 /* Pienillä näytöillä muutetaan otsikko, navigaatio ja ruudukko pystysuuntaiseksi. */
@@ -280,14 +280,14 @@ h1 {
 
 .contact-card,
 .contact-form {
-  background-color: #f2d6a2;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 }
 
 .contact-card h3 {
-  color: #0f4c5c;
+  color: #2f5d62;
   margin-bottom: 10px;
 }
 
@@ -312,7 +312,7 @@ h1 {
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  border: 2px solid #0f4c5c;
+  border: 2px solid #e8e0d4;
   border-radius: 8px;
   font-family: inherit;
   font-size: 16px;
@@ -322,21 +322,21 @@ h1 {
   padding: 10px 24px;
   border: none;
   border-radius: 8px;
-  background-color: #0f4c5c;
+  background-color: #234649;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
 .contact-form button:hover {
-  background-color: #1b7285;
+  background-color: #2f5d62;
 }
 
 /* Korostettu teksti */
 .highlight {
   padding: 12px 18px;
-  border-left: 6px solid #0f4c5c;
-  background-color: #f2d6a2;
+  border-left: 6px solid #c8795a;
+  background-color: #ffffff;
 }
 
 /* Taulukko */
@@ -349,7 +349,7 @@ caption {
   margin-bottom: 10px;
   text-align: left;
   font-weight: bold;
-  color: #0f4c5c;
+  color: #2f5d62;
 }
 
 th,
@@ -359,19 +359,19 @@ td {
 }
 
 th {
-  background-color: #0f4c5c;
-  color: white;
+  background-color: #234649;
+  color: #ffffff;
 }
 
 td {
-  background-color: #f2d6a2;
-  border-bottom: 2px solid #f7f1e3;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e8e0d4;
 }
 
 /* Muodostaa alatunnisteen ruudukon footer-alueeseen. */
 footer {
     grid-area: footer;
-    background-color: rgb(20, 229, 174);
-    color: whitesmoke;
+    background-color: #234649;
+    color: #ffffff;
     padding: 20px;
 }
