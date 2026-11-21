@@ -367,3 +367,11 @@ td {
   background-color: #f2d6a2;
   border-bottom: 2px solid #f7f1e3;
 }
+
+/* Muodostaa alatunnisteen ruudukon footer-alueeseen. */
+footer {
+    grid-area: footer;
+    background-color: rgb(20, 229, 174);
+    color: whitesmoke;
+    padding: 20px;
+}
