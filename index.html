@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Web-blogi</title>
+    <title>Vesivärigalleria</title>
 
     <link rel="stylesheet" href="css/gridi-blogi.css">
 </head>
@@ -15,30 +15,28 @@
     <div class="container">
 
         <header class="header">
-            <div>
-                <h1>Web-blogi</h1>
-                <p>Ajankohtaista HTML:stä ja CSS:stä</p>
-            </div>
-            <div class="header-info">
-                <p>Julkaistu: 8.9.2024</p>
-                <p>Kirjoittaja: Iida</p>
-            </div>
+            <a href="index.html" class="logo">Vesiväritöitä</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="html/artgallery.html">Galleria</a></li>
+                    <li><a href="html/contact.html">Yhteystiedot</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="html/artgallery.html">Galleria</a></li>
-                <li><a href="html/contact.html">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-
         <main class="main">
+            <section class="intro">
+                <h1>Vesivärigalleria</h1>
+                <p>Käsintehtyä taidetta tilauksesta</p>
+                <p class="post-info">Julkaistu: 8.9.2024 | Kirjoittaja: Iida</p>
+            </section>
 
             <section class="hero kuva-teksti">
                 <h2>Vesiväritöitä</h2>
                 <div class="kuva-teksti-rivi">
-                    <img src="images/kehys2.jpeg" alt="watercolor painting of iris flowers in frames">
+                    <img src="images/kehys2.jpeg" alt="watercolor painting of iris flowers in frames" width="800"
+                        height="600">
                     <div class="teksti">
                         <h3>Tervetuloa taidegalleriaan</h3>
                         <p>
@@ -48,19 +46,18 @@
                 </div>
             </section>
 
-            <h2>HTML</h2>
+            <h2>Tekniikat</h2>
             <article class="blogi-article">
-                <h3>Perusteet</h3>
+                <h3>Töistäni</h3>
                 <p>
-                    HTML on merkintäkieli, jota käytetään verkkosivujen rakenteen luomiseen. Se koostuu elementeistä,
-                    jotka määrittelevät sisällön ja sen esityksen.
+                    Yhdistän eri tekniikoita, kuten vesivärejä, akryylejä ja mustetta.
+                    Teen tilauksesta myös tussitöitä ja kalligrafiaa. Kysy lisää tilaustyön toteutuksesta!
                 </p>
-                <h3>Semanttinen HTML</h3>
+                <h3>Tekniikat</h3>
                 <ul>
-                    <li>header</li>
-                    <li>nav</li>
-                    <li>main</li>
-                    <li>section</li>
+                    <li>Vesiväri, akryyli</li>
+                    <li>Kalligrafia musteella</li>
+                    <li>Tussityöt</li>
                 </ul>
             </article>
 
@@ -78,23 +75,28 @@
                 <p>Voit selata kuvia kuvakarusellissa.</p>
                 <div class="carousel">
                     <figure class="carousel-item" id="index-kuva1">
-                        <img src="images/sienet2.jpg" alt="psychedelic mushroom artwork, black and white ink">
+                        <img src="images/sienet2.jpg" alt="psychedelic mushroom artwork, black and white ink"
+                            width="800" height="600">
                         <figcaption>sienet2</figcaption>
                     </figure>
                     <figure class="carousel-item" id="index-kuva2">
-                        <img src="images/synttarikukka3.jpg" alt="birthmonth flower cards for july and august">
+                        <img src="images/synttarikukka3.jpg" alt="birthmonth flower cards for july and august"
+                            width="800" height="600">
                         <figcaption>synttarikukka3</figcaption>
                     </figure>
                     <figure class="carousel-item" id="index-kuva3">
-                        <img src="images/pimu.jpeg" alt="watercolor image of a black poodle dog">
+                        <img src="images/pimu.jpeg" alt="watercolor image of a black poodle dog" width="800"
+                            height="600">
                         <figcaption>pimu</figcaption>
                     </figure>
                     <figure class="carousel-item" id="index-kuva4">
-                        <img src="images/lasten3valle.jpg" alt="watercolor painting of a plushie-toy dog">
+                        <img src="images/lasten3valle.jpg" alt="watercolor painting of a plushie-toy dog" width="800"
+                            height="600">
                         <figcaption>lasten3valle</figcaption>
                     </figure>
                     <figure class="carousel-item" id="index-kuva5">
-                        <img src="images/sienet.jpg" alt="watercolor painting of psychedelic mushrooms">
+                        <img src="images/sienet.jpg" alt="watercolor painting of psychedelic mushrooms" width="800"
+                            height="600">
                         <figcaption>sienet</figcaption>
                     </figure>
                 </div>
@@ -110,12 +112,13 @@
         </main>
 
         <aside class="sidebar">
-            <h2>Lisätietoja</h2>
-
+            <h2>Ideoita tilaustyölle</h2>
+            <p>Autan mielelläni suunnittelemaan työn sinun ideastasi.</p>
             <ul>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Consectetur adipiscing elit.</li>
-                <li>Sed do eiusmod tempor incididunt.</li>
+                <li>Hääkutsut & pöytäkortit</li>
+                <li>Ristiäis- ja nimiäislahjat esimerkiksi lapsen hellittelynimestä johdetusta aiheesta</li>
+                <li>Syntymäpäiväkortit, aiheena syntymäkuukauden kukka tai lapsen lempilelu</li>
+                <li>Tilaustyö omasta aiheesta, lemmikki, lempimaisema tai muu haluamasi aihe</li>
             </ul>
         </aside>
     </div>

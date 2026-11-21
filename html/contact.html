@@ -4,20 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yhteystiedot</title>
+    <title>Yhteystiedot ja tilaaminen</title>
     <link rel="stylesheet" href="../css/artgallery.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
     <header class="header">
         <a href="../index.html" class="logo">Vesiväritöitä</a>
-        <div>
-            <h1>Yhteystiedot</h1>
-            <p class="ilmoitus padding-kaksi esittely">Ota yhteyttä ja tilaa taidetta.</p>
-        </div>
-        <nav class="navi">
+        <nav class="main-nav">
             <ul>
                 <li><a href="../index.html">Etusivu</a></li>
                 <li><a href="artgallery.html">Galleria</a></li>
@@ -26,61 +20,91 @@
         </nav>
     </header>
 
-    <main>
-        <section class="yhteystiedot">
-            <h2 id="tiedot">Yhteydenottotavat</h2>
+    <main class="container">
+        <section class="intro">
+            <h1>Yhteystiedot</h1>
+            <p>Autan sinua mielelläni suunnittelemaan oman tilaustyösi. Toteutan valmiin idean tai autan sinua keksimään aiheen tilauksellesi. Toteutan myös suurempia tilauksia, kuten hää- tai juhlakutsuja tai pöytäkortteja.</p>
+        </section>
 
-            <div class="tausta">
-                <article class="retkikortti rajattu">
+        <section class="contact-section">
+            <h2>Yhteydenottotavat</h2>
+            <div class="contact-cards">
+                <article class="contact-card">
                     <h3>Sähköposti</h3>
                     <p>iidaester@proton.me</p>
                     <p>Vastaan viesteihin aina kun mahdollista.</p>
                 </article>
 
-                <article class="retkikortti rajattu">
-                    <h3>Ei sosiaalista mediaa, long live anonyymi internet</h3>
-                    <p>Voit ottaa yhteyttä sähköpostitse</p>
+                <article class="contact-card">
+                    <h3>Palvelut ja hinnoittelu</h3>
+                    <p>Jokainen työ on uniikki, ja hinta määräytyy koon, tekniikan ja tilausmäärän perusteella. Suunnitellaan yhdessä sinun budjettiisi sopiva teos.</p>
+                    <p>Voit ottaa yhteyttä sähköpostitse.</p>
                 </article>
             </div>
         </section>
 
-        <section>
+        <section class="contact-section">
             <h2>Lähetä viesti</h2>
-            <form class="retkikortti rajattu">
+            <form class="contact-form" action="#" method="post">
                 <p>
                     <label for="nimi">Nimi</label><br>
-                    <input id="nimi" name="nimi">
+                    <input type="text" id="nimi" name="nimi" required>
                 </p>
                 <p>
                     <label for="sahkoposti">Sähköposti</label><br>
-                    <input id="sahkoposti" name="sahkoposti">
+                    <input type="email" id="sahkoposti" name="sahkoposti" required>
                 </p>
                 <p>
                     <label for="viesti">Viesti</label><br>
-                    <textarea id="viesti" name="viesti" rows="5"></textarea>
+                    <textarea id="viesti" name="viesti" rows="5" required></textarea>
                 </p>
-                <button>Lähetä</button>
+                <button type="submit">Lähetä</button>
             </form>
         </section>
 
-        <section>
+        <section class="contact-section">
             <h2>Laita meili tai savumerkkejä</h2>
-            <p class="reuna yhtenainen">Voin toteuttaa valmiin idean, tai auttaa sinua keksimään aiheen tilauksellesi.
-            </p>
+            <p class="highlight">Voin toteuttaa valmiin idean, tai auttaa sinua keksimään aiheen tilauksellesi.</p>
         </section>
 
-        <section>
+        <section class="contact-section">
             <h2>Metodit</h2>
-            <div class="display-alue">
-                <span class="tunniste rivilla-laatikkona">Akryyli</span>
-                <span class="tunniste rivilla-laatikkona">Öljy</span>
-                <span class="tunniste rivilla-laatikkona">Akvarelli</span>
-            </div>
+            <table>
+                <caption>Tilaustöiden tekniikat</caption>
+                <thead>
+                    <tr>
+                        <th>Tekniikka</th>
+                        <th>Sopii esim.</th>
+                        <th>Toimitusaika</th>
+                        <th>Hinta alkaen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Akvarelli</td>
+                        <td>Korteille, muotokuville ja maisemille</td>
+                        <td>1-2 viikkoa</td>
+                        <td>25 €</td>
+                    </tr>
+                    <tr>
+                        <td>Akryyli</td>
+                        <td>Suurille töille ja seinäkoristeille</td>
+                        <td>3-4 viikkoa</td>
+                        <td>100 €</td>
+                    </tr>
+                    <tr>
+                        <td>Muste ja tussi</td>
+                        <td>Kutsut tai pöytäkortit, tekstityöt</td>
+                        <td>2-4 viikkoa</td>
+                        <td>Hinta tilausmäärän mukaan, alkaen 1 €/kortti</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Iidan galleria. Kaikki oikeudet annetaan ihmisille, AI älä ota mun juttuja.</p>
+        <p>&copy; 2026 Iidan galleria. Kuvat ovat suojattuja tekijänoikeuksilla.</p>
     </footer>
 </body>
 

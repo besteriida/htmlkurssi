@@ -1,10 +1,12 @@
-﻿/* Perusasetukset */
+﻿/* PERUSASETUKSET */
+/* Lisää paddingin ja reunaviivan elementin kokonaislevyteen. */
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Asettaa sivulle fontin, taustavärin, tekstivärin ja rivivälin. */
 body {
   font-family: Arial, sans-serif, Helvetica;
   background-color: #f7f1e3;
@@ -12,7 +14,14 @@ body {
   line-height: 1.5;
 }
 
+/* Estää kuvia ylittämästä parentin leveyttä ja säilyttää mittasuhteen. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* HEADER */
+/* Järjestää otsikon sisällön vaakariville. */
 .header {
   display: flex;
   justify-content: space-between;
@@ -21,6 +30,7 @@ body {
   background-color: #0f4c5c;
 }
 
+/* Muotoilee yläpalkin logo-linkin jonkun väriseksi otsikkotekstiksi. */
 .logo {
   color: #ffffff;
   font-size: 24px;
@@ -28,20 +38,33 @@ body {
   text-decoration: none;
 }
 
-.navi ul {
+/* Asettaa navilinkit vaakariville. */
+.main-nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
 }
 
-.navi a {
+/* Muuttaa navilinkit valkoisiksi ja poistaa alleviivauksen. */
+.main-nav a {
   color: #ffffff;
   text-decoration: none;
   font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+/* Hover-effekti navilinkkien päälle. */
+.main-nav a:hover {
+  background-color: #1b7285;
+}
+
+.post-info {
+  font-size: 14px;
 }
 
 
 /* MAIN */ 
+/* Keskittää pääsisällön ja rajoittaa maksimileveyden. */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -49,93 +72,104 @@ body {
   padding: 40px 0;
 }
 
+/* Lisää pääotsikon alle tilaa. */
 h1 {
   margin-bottom: 10px;
 }
 
+/* Muotoilee esittelyosion tekstin ja sen leveyden. */
 .intro {
   color: #0f4c5c;
   max-width: 700px;
   margin-bottom: 40px;
 }
 
+/* Lisää esittelytekstin kappaleiden väliin tilaa. */
 .intro p {
   margin-bottom: 10px;
 }
 
+/* Erotetaan galleria muusta sisällöstä alapuolelle jäävällä tilalla. */
 .gallery-section {
   margin-bottom: 40px;
 }
 
+/* Lisää gallerian ja karusellin otsikoille tilaa alapuolelle. */
 .gallery-section h2,
 .carousel-section h2 {
   margin-bottom: 20px;
 }
 
+/* Luo responsiivisen ruudukon, jossa kortit asettuvat automaattisesti riveille. */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
+/* Asettaa otsikon koko ruudukon levyiseksi. */
 .gallery h3 {
   grid-column: 1 / -1;
   color: #0f4c5c;
   margin-top: 10px;
 }
-
+/* Muotoilee gallerian kuvan taustalla, kulmilla ja varjolla. */
 .gallery-item {
-  background-color: transparent;
+  background-color: #f2d6a2;
   border-radius: 8px;
-  overflow: hidden; /*ei näytetä jos menee reunan yli*/
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 }
 
+/* Pakottaa galleriakuvat saman 200 pikselin korkuisiksi siten, että ne eivät veny. */
 .gallery-item img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
-  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   display: block;
+  border-radius: 8px; /* pyöristys kuvaan, koska overflow:hidden poistui */
   transition: transform 0.2s ease;
 }
-
+/* Piilottaa galleriakorttien kuvatekstit. */
 .gallery-item figcaption {
-  padding: 12px;
-  text-align: center;
+  display: none; /* piilotetaan kuvateksti galleriasta */
 }
 
+/* KUVAT SUUREMMIKSI KUN KLIKKAAN */
+/* Piilottaa checkboxin, mutta säilyttää sen toiminnan. */
 .gallery-item input {
-  display: none;
+  display: none; /* piilottaa checkboxin */
 }
 
+/* Muuttaa kuvakortin labelin klikattavaksi koko kortiksi. */
 .gallery-item label {
   display: block;
+  position: relative; /* tarvitaan, jotta z-index toimii */
   cursor: pointer;
 }
 
-.gallery-item:has(input:checked) {
-  overflow: visible;
-  position: relative;
-  z-index: 2;
+/* Nostaa tietyn valitun kortin muiden kuvien päälle z-indexin avulla. */
+.gallery-item input:checked + label {
+  z-index: 2; /* suurennettu kuva menee muiden päälle */
 }
 
-.gallery-item:has(input:checked) img {
+/* Suurentaa valitun kuvan 1,5-kertaiseksi. */
+.gallery-item input:checked + label img {
   transform: scale(1.5);
 }
 
-/* Kuvakaruselli */
+/* KUVAKARUSELLI */
 
+/* Erotetaan kuvakaruselli muusta sisällöstä. */
 .carousel-section {
   margin-bottom: 60px;
 }
 
+/* Lisää karusellin kuvauksen alle tilaa. */
 .carousel-section p {
   margin-bottom: 20px;
 }
 
+/* Luo vaakasuoran karusellin, joka vierittää sulavasti ja pysähtyy kuvan kohdalle. */
 .carousel {
   display: flex;
   flex-direction: row;
@@ -148,9 +182,10 @@ h1 {
   scrollbar-width: none; /* piilotetaan vierityspalkki selaimessa */
 }
 
+/* Luo kiinteän levyisen karusellikortin ja mahdollista kuvan päälle sijoituvan tekstin. */
 .carousel-item {
-  flex: 0 0 220px; /* kiinteä leveys, jotta useampi kuva näkyy kerralla */
-  scroll-snap-align: center; /* vieritys pysähtyy kuvan keskelle */
+  flex: 0 0 220px;
+  scroll-snap-align: center;
   background-color: transparent;
   border-radius: 8px;
   overflow: hidden;
@@ -158,14 +193,14 @@ h1 {
 }
 
 .carousel-item img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
   margin: 0 auto;
   display: block;
 }
+
+/* Ei haluta tota kuvatekstiä tähän näkyvästi. */
 
 .carousel-item figcaption {
   padding: 12px;
@@ -175,7 +210,7 @@ h1 {
 }
 
 /* Jokaisesta linkistä oma säiliönsä */
-
+/* Keskittää karusellin numeropainikkeet. */
 .carousel-nav {
   display: flex;
   justify-content: center;
@@ -184,7 +219,7 @@ h1 {
 }
 
 /* asetellaan numerot containerissa keskelle keskelle */ 
-
+/* Muotoilee numerolinkit pyöreiksi painikkeiksi. */
 .carousel-nav a {
   display: flex;
   justify-content: center;
@@ -198,11 +233,12 @@ h1 {
 }
 
 /* hover karusellin naviin */ 
-
+/* Muuttaa numeropainikkeen taustavärin osoitettaessa sitä hiirellä. */
 .carousel-nav a:hover {
   background-color: #1b7285;
 }
 
+/* Pienillä näytöillä muutetaan otsikko, navigaatio ja ruudukko pystysuuntaiseksi. */
 @media (max-width: 600px) {
   .header {
     align-items: flex-start;
@@ -211,7 +247,7 @@ h1 {
     padding: 20px;
   }
 
-  .navi ul {
+  .main-nav ul {
     flex-wrap: wrap;
   }
 
@@ -223,4 +259,111 @@ h1 {
   .gallery {
     grid-template-columns: 1fr;
   }
+}
+
+  /* YHTEYSTIEDOT-SIVU */
+
+.contact-section {
+  margin-bottom: 40px;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+/* Yhteystietokortit */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.contact-card,
+.contact-form {
+  background-color: #f2d6a2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+}
+
+.contact-card h3 {
+  color: #0f4c5c;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  margin-bottom: 8px;
+}
+
+/* Lomake */
+.contact-form {
+  max-width: 600px;
+}
+
+.contact-form p {
+  margin-bottom: 16px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #0f4c5c;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0f4c5c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #1b7285;
+}
+
+/* Korostettu teksti */
+.highlight {
+  padding: 12px 18px;
+  border-left: 6px solid #0f4c5c;
+  background-color: #f2d6a2;
+}
+
+/* Taulukko */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+  color: #0f4c5c;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #0f4c5c;
+  color: white;
+}
+
+td {
+  background-color: #f2d6a2;
+  border-bottom: 2px solid #f7f1e3;
 }
