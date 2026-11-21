@@ -14,7 +14,8 @@
 
     <header class="header">
         <a href="index.html" class="logo">Vesiväritöitä</a>
-        <nav class="main-nav">
+
+        <nav class="main-nav" aria-label="Päänavigaatio">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
                 <li><a href="html/artgallery.html">Galleria</a></li>
@@ -26,99 +27,133 @@
     <div class="container">
 
         <main class="main">
+
             <section class="intro">
-                <h1>Vesivärigalleria</h1>
+                <h1>Vesiväritöitä</h1>
                 <p>Käsintehtyä taidetta tilauksesta</p>
-                <p class="post-info">Julkaistu: 8.9.2026 | Kirjoittaja: Iida</p>
+                <p class="post-info">
+                    Julkaistu: 8.9.2026 | Kirjoittaja: Iida
+                </p>
             </section>
 
             <section class="hero kuva-teksti">
-                <h2>Vesiväritöitä</h2>
                 <div class="kuva-teksti-rivi">
-                    <img src="images/synttarikukka4.jpg" alt="watercolor painting of iris flowers in frames" width="800"
-                        height="600">
+
+                    <img src="images/synttarikukka4.jpg" alt="Vesiväreillä maalattu kukka-aiheinen syntymäpäiväkortti"
+                        width="800" height="600">
+
                     <div class="teksti">
-                        <h3>Tervetuloa taidegalleriaan</h3>
-                        <p>Tutustu vesiväritöihin ja löydä lisää kuvia galleriasta.</p>
-                        <a href="html/artgallery.html" class="nappi">Siirry galleriaan</a>
+                        <h2>Tervetuloa taidegalleriaan</h2>
+
+                        <p>
+                            Tutustu vesiväritöihin ja löydä lisää kuvia galleriasta.
+                        </p>
+
+                        <a href="html/artgallery.html" class="nappi">
+                            Siirry galleriaan
+                        </a>
                     </div>
+
                 </div>
             </section>
 
-            <h2>Töistäni</h2>
-            <article class="blogi-article">
+            <section>
+                <h2>Töistäni</h2>
 
-                <p>
-                    Yhdistän eri tekniikoita, kuten vesivärejä, akryylejä ja mustetta.
-                    Teen tilauksesta myös tussitöitä ja kalligrafiaa. Kysy lisää tilaustyön toteutuksesta!
-                </p>
-                <h3>Tekniikat</h3>
-                <ul>
-                    <li>Vesiväri, akryyli</li>
-                    <li>Kalligrafia musteella</li>
-                    <li>Tussityöt</li>
-                </ul>
-            </article>
+                <article class="blogi-article">
 
+                    <p>
+                        Yhdistän eri tekniikoita, kuten vesivärejä, akryylejä ja mustetta.
+                        Teen tilauksesta myös tussitöitä ja kalligrafiaa.
+                        Kysy lisää tilaustyön toteutuksesta!
+                    </p>
+
+                    <h3>Tekniikat</h3>
+
+                    <ul>
+                        <li>Vesiväri, akryyli</li>
+                        <li>Kalligrafia musteella</li>
+                        <li>Tussityöt</li>
+                    </ul>
+
+                </article>
+            </section>
 
             <section class="video-section">
+
                 <video controls playsinline preload="metadata">
-                    <source src="images/muraalivideo.mp4" type="video/mp4" alt="video seinämaalauksesta jossa lehmä, mehiläinen, sammakko ja perhonen ja peltomaisemaa">
+                    <source src="images/muraalivideo.mp4" type="video/mp4">
                     Selaimesi ei tue videon toistamista.
                 </video>
+
             </section>
 
             <section class="carousel-section">
+
                 <h2>Selaa kuvia</h2>
+
                 <p>Voit selata kuvia kuvakarusellissa.</p>
+
                 <div class="carousel">
+
                     <figure class="carousel-item" id="index-kuva1">
-                        <img src="images/sienet2.jpg" alt="psychedelic mushroom artwork, black and white ink"
+                        <img src="images/sienet2.jpg" alt="Mustavalkoinen psykedeelinen sieniaiheinen mustetyö"
                             width="800" height="600">
-                        <figcaption>muste</figcaption>
+                        <figcaption>Muste</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva2">
-                        <img src="images/synttarikukka3.jpg" alt="birthmonth flower cards for july and august"
+                        <img src="images/synttarikukka3.jpg" alt="Heinä- ja elokuun syntymäkuukausien kukkakortit"
                             width="800" height="600">
-                        <figcaption>vesiväri</figcaption>
+                        <figcaption>Vesiväri</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva3">
-                        <img src="images/pimu.jpeg" alt="watercolor image of a black poodle dog" width="800"
+                        <img src="images/pimu.jpeg" alt="Mustaa villakoiraa esittävä vesivärimaalaus" width="800"
                             height="600">
-                        <figcaption>vesiväri</figcaption>
+                        <figcaption>Vesiväri</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva4">
-                        <img src="images/lasten3valle.jpg" alt="watercolor painting of a plushie-toy dog" width="800"
+                        <img src="images/lasten3valle.jpg" alt="Pehmolelukoiraa esittävä vesivärimaalaus" width="800"
                             height="600">
-                        <figcaption>vesiväri</figcaption>
+                        <figcaption>Vesiväri</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva5">
-                        <img src="images/sienet.jpg" alt="watercolor painting of psychedelic mushrooms" width="800"
+                        <img src="images/sienet.jpg" alt="Psykedeelisiä sieniä esittävä vesivärimaalaus" width="800"
                             height="600">
-                        <figcaption>muste</figcaption>
+                        <figcaption>Muste</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva6">
-                        <img src="images/lasten1.jpg" alt="watercolor painting of plushie-toy bear with a bow"
-                            width="800" height="600">
-                        <figcaption>vesiväri</figcaption>
+                        <img src="images/lasten1.jpg"
+                            alt="Rusetilla koristeltua pehmolelukarhua esittävä vesivärimaalaus" width="800"
+                            height="600">
+                        <figcaption>Vesiväri</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva7">
-                        <img src="images/lasten2.jpg" alt="watercolor painting of a sleeping baby fox" width="800"
+                        <img src="images/lasten2.jpg" alt="Nukkuvaa ketunpoikasta esittävä vesivärimaalaus" width="800"
                             height="600">
-                        <figcaption>vesiväri</figcaption>
+                        <figcaption>Vesiväri</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva8">
-                        <img src="images/luonto5.jpg" alt="watercolor painting of a misty forest" width="800"
+                        <img src="images/luonto5.jpg" alt="Sumuista metsää esittävä vesivärimaalaus" width="800"
                             height="600">
-                        <figcaption>vesiväri</figcaption>
+                        <figcaption>Vesiväri</figcaption>
                     </figure>
+
                     <figure class="carousel-item" id="index-kuva9">
-                        <img src="images/synttarikukka1.jpg" alt="birthday card with october's birthday flower"
+                        <img src="images/synttarikukka1.jpg" alt="Lokakuun syntymäkuukauden kukkaa esittävä kortti"
                             width="800" height="600">
-                        <figcaption>vesiväri</figcaption>
+                        <figcaption>Vesiväri</figcaption>
                     </figure>
+
                 </div>
-                <nav class="carousel-nav">
+
+                <nav class="carousel-nav" aria-label="Kuvakarusellin navigaatio">
                     <a href="#index-kuva1">1</a>
                     <a href="#index-kuva2">2</a>
                     <a href="#index-kuva3">3</a>
@@ -129,24 +164,49 @@
                     <a href="#index-kuva8">8</a>
                     <a href="#index-kuva9">9</a>
                 </nav>
+
             </section>
 
         </main>
 
         <aside class="sidebar">
+
             <h2>Ideoita tilaustyölle</h2>
-            <p>Autan mielelläni suunnittelemaan työn sinun ideastasi.</p>
+
+            <p>
+                Autan mielelläni suunnittelemaan työn sinun ideastasi.
+            </p>
+
             <ul>
-                <li>Hääkutsut & pöytäkortit</li>
-                <li>Ristiäis- ja nimiäislahjat esimerkiksi lapsen hellittelynimestä johdetusta aiheesta</li>
-                <li>Syntymäpäiväkortit, aiheena syntymäkuukauden kukka tai lapsen lempilelu</li>
-                <li>Tilaustyö omasta aiheesta, lemmikki, lempimaisema tai muu haluamasi aihe</li>
+                <li>Hääkutsut &amp; pöytäkortit</li>
+
+                <li>
+                    Ristiäis- ja nimiäislahjat esimerkiksi lapsen
+                    hellittelynimestä johdetusta aiheesta
+                </li>
+
+                <li>
+                    Syntymäpäiväkortit, aiheena syntymäkuukauden kukka
+                    tai lapsen lempilelu
+                </li>
+
+                <li>
+                    Tilaustyö omasta aiheesta, lemmikki, lempimaisema
+                    tai muu haluamasi aihe
+                </li>
             </ul>
+
         </aside>
+
     </div>
+
     <footer>
-        <p>&copy; 2026 Iidan galleria. Kuvat ovat suojattuja tekijänoikeuksilla.</p>
+        <p>
+            &copy; 2026 Iidan galleria.
+            Kuvat ovat suojattuja tekijänoikeuksilla.
+        </p>
     </footer>
+
 </body>
 
 </html>
