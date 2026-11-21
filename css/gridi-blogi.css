@@ -21,13 +21,22 @@ img {
 
 /* Sivun pääasettelu jakaa sisällön ja sivupalkin ruudukoksi. */
 .container {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-areas: "main sidebar";
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
 .sidebar {
     grid-area: sidebar;
-    align-self: start; /* palkki ei veny koko sivun korkuiseksi */
-    position: sticky; /* palkki pysyy paikallaan kun sivua vieritetään */
+    align-self: start;
+    /* palkki ei veny koko sivun korkuiseksi */
+    position: sticky;
+    /* palkki pysyy paikallaan kun sivua vieritetään */
     top: 20px;
     padding: 24px;
     background-color: #ffffff;
@@ -266,26 +275,16 @@ nav a.active {
 /* Isontaa hero-kuvan korkeuden ja säilyttää kokonaisen kuvan vasemmassa reunassa. */
 
 .hero .kuva-teksti-rivi {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 0;
-    align-items: stretch;
-    margin-bottom: 0;
-    background-color: #ffffff;
-    border: 1px solid #e8e0d4;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    grid-template-columns: 1fr 1fr;
 }
 
 .hero .kuva-teksti-rivi img {
     width: 100%;
     height: 100%;
-    min-height: 320px;
-    max-height: 440px;
+    aspect-ratio: 4 / 3;
+    max-height: 420px;
     object-fit: cover;
     object-position: center;
-    flex: none;
 }
 
 .hero .teksti {
@@ -337,12 +336,15 @@ nav a.active {
     margin-bottom: 20px;
 }
 
-/* Säätelee videon maksimikokoja ja taustaväriä. */
+/* Säätelee videon kokoa ja anna sen ottaa oma kokonsa aina. */
 .video-section video {
     display: block;
-    width: 100%;
-    max-height: 600px;
-    background-color: #234649;
+    width: auto;
+    max-width: 100%;
+    max-height: 70vh;  /* ei koskaan korkeampi kuin 70 % ruudusta */
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: transparent;
 }
 
 /* Erotetaan kuvakaruselli muusta sisällöstä alapuolelle jäävällä tilalla. */
@@ -425,11 +427,12 @@ nav a.active {
 @media (max-width: 700px) {
 
     .sidebar {
-    position: static;
+        position: static;
     }
 
-    .hero .kuva-teksti-rivi {
-        grid-template-columns: 1fr;
+    .hero .kuva-teksti-rivi img {
+        height: auto;
+        aspect-ratio: 16 / 10;
     }
 
     .hero .kuva-teksti-rivi img {
@@ -444,7 +447,6 @@ nav a.active {
         grid-template-columns: 1fr;
         grid-template-areas:
             "main"
-            "sidebar"
-        ;
+            "sidebar";
     }
 }
