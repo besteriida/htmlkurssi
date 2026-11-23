@@ -192,6 +192,7 @@ h1 {
   box-shadow: none;
 }
 
+/* Rajaa karusellikuvan tasakokoiseksi ja täyttää kortin kuvasuhteen mukaan. */
 .carousel-item img {
   width: 100%;
   height: 220px;
@@ -238,7 +239,7 @@ h1 {
   background-color: #2f5d62;
 }
 
-/* Pienillä näytöillä muutetaan otsikko, navigaatio ja ruudukko pystysuuntaiseksi. */
+/* Responsiivinen muotoilu pienille näytöille. */
 @media (max-width: 600px) {
   .header {
     align-items: flex-start;
@@ -266,7 +267,7 @@ h1 {
   }
 }
 
-  /* YHTEYSTIEDOT-SIVU */
+/* Yhteystietojen ja lomakkeen osiot. */
 
 .contact-section {
   margin-bottom: 40px;
@@ -344,7 +345,7 @@ h1 {
   background-color: #ffffff;
 }
 
-/* Taulukko */
+/* Taulukko näyttää tilaustietojen tiedot selkeinä riveinä ja sarakkeina. */
 table {
   width: 100%;
   border-collapse: collapse;

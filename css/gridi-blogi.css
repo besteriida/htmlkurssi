@@ -306,8 +306,8 @@ nav a.active {
     margin-bottom: 24px;
 }
 
+/* Muuttaa linkin napiksi ja nostaa sen näkyvästi esiin. */
 /* Nappi että pääsee suoraan galleriaan. */
-
 .hero .teksti .nappi {
     align-self: flex-start;
     padding: 12px 24px;
