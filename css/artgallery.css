@@ -259,6 +259,11 @@ h1 {
   .gallery {
     grid-template-columns: 1fr;
   }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
 }
 
   /* YHTEYSTIEDOT-SIVU */
